@@ -10,6 +10,8 @@ module.exports = {
         dgray4 : "#73767d",
         dgray5 : "#b1b5bc",
         dgray6 : "#2b2d31",
+        dgray7 : "#111214",
+        dgray8 : "#b5bac1",
         dblue1 : "#5865F2",
         dgreen1 : "#23A559",
       }
