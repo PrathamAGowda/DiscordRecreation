@@ -21,10 +21,12 @@ const SideBarComponents = () => {
     }
 
     const CreateServer = () => {
-        togglePopup(false)
-        let temp = <div className='icon'>{getFirstLetters(serverName)}</div>
-        addServer([...servers, {temp, name : serverName}])
-        setServerName('')
+        if(serverName !== '') {
+            togglePopup(false)
+            let temp = <div className='icon'>{getFirstLetters(serverName)}</div>
+            addServer([...servers, {temp, name : serverName}])
+            setServerName('')
+        }
     }
 
     const bgClick = (e) => {
@@ -99,7 +101,7 @@ const SideBarComponents = () => {
             </span>
         </div>
 
-        <div className='fixed flex justify-center items-center'>
+        <div className='fixed flex justify-center items-center z-10'>
             {showPopup ? popup : <></>}
         </div>
 
